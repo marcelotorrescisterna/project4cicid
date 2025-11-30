@@ -1,16 +1,14 @@
-version: 0.2
+version: 0.2        # versión del buildspec (siempre 0.2)
 
-phases:
-  install:
-    commands:
-      - echo "Instalando dependencias..."
+phases:             # fases que debe ejecutar CodeBuild
+  install:          
+    commands:       # comandos que se correrán en bash
       - pip install -r requirements.txt -t .
 
   build:
     commands:
-      - echo "Creando archivo ZIP..."
       - zip -r output.zip .
 
-artifacts:
+artifacts:          # lo que CodeBuild entrega a CodePipeline
   files:
     - output.zip
