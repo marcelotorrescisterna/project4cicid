@@ -11,4 +11,6 @@ phases:             # fases que debe ejecutar CodeBuild
 
 artifacts:          # lo que CodeBuild entrega a CodePipeline
   files:
-    - output.zip
+    - lambda_function.py
+    - requirements.txt
+    - '**/*'
