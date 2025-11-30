@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Instalando dependencias..."
+      - pip install -r requirements.txt -t .
+
+  build:
+    commands:
+      - echo "Creando archivo ZIP..."
+      - zip -r output.zip .
+
+artifacts:
+  files:
+    - output.zip
