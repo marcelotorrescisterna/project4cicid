@@ -5,6 +5,10 @@ phases:             # fases que debe ejecutar CodeBuild
     commands:       # comandos que se correrán en bash
       - pip install -r requirements.txt -t .
 
+  build:
+    commands:
+      - zip -r output.zip .
+
 artifacts:          # lo que CodeBuild entrega a CodePipeline
   files:
     - '**/*'
