@@ -7,5 +7,5 @@ def lambda_handler(event, context):
     """
     return {
         "statusCode": 200,
-        "body": "Modelo cargado OK. Predicción = 1"
+        "body": "Modelo cargado OK. Predicción = 1 !!"
     }
